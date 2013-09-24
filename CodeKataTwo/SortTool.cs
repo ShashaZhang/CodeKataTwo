@@ -1,15 +1,13 @@
-﻿namespace CodeKataTwo
+﻿using System;
+
+namespace CodeKataTwo
 {
     public class SortTool
     {
         public int chop(int goalValue, int[] array)
         {
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] == goalValue)
-                    return i;
-            }
-                return -1;
+            var pos = Array.BinarySearch(array, 0, array.Length, goalValue);
+            return pos < 0 ? -1 : pos;
         }
     }
 }
