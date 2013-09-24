@@ -6,8 +6,29 @@ namespace CodeKataTwo
     {
         public int chop(int goalValue, int[] array)
         {
-            var pos = Array.BinarySearch(array, 0, array.Length, goalValue);
-            return pos < 0 ? -1 : pos;
+            int pos = array.Length / 2;
+            if (goalValue < array[pos])
+            {
+                while (goalValue != array[pos])
+                {
+                    pos--;
+                }
+            }else if (goalValue > array[pos])
+            {
+                while (goalValue != array[pos])
+                {
+                    pos++;
+                }
+            }
+            else if (goalValue == array[pos])
+            {
+                return pos;
+            }
+            else
+            {
+                return -1;    
+            }
+            return pos;
         }
     }
 }
