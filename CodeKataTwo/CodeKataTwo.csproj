@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="CodeKataTwoTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortTool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
